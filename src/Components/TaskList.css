@@ -1,0 +1,14 @@
+li {
+  padding: 16px 16px;
+  border: 1px solid #222f3e;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  background-color: #ddfffb;
+  border-radius: 2px;
+}
+
+.btn__task {
+  float: right;
+  cursor: pointer;
+}
