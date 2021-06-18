@@ -92,7 +92,38 @@ class LinkedList {
     }
   }
 
-  
+  removeElement(id) {
+    var current = this.head;
+    var prev = null;
+
+    while (current != null) {
+      if (current.id === id) {
+        if (prev == null) {
+          this.head = current.next;
+        } else {
+          prev.next = current.next;
+        }
+        return current.id;
+      }
+      prev = current;
+      current = current.next;
+    }
+    return -1;
+  }
+
+  // prints the list items
+  printList() {
+    var curr = this.head;
+    var str = "";
+    var id = "";
+    while (curr) {
+      str += curr.element + " ";
+      id += curr.id + " ";
+      curr = curr.next;
+    }
+    console.log(str);
+    console.log(id);
+  }
 }
 
 
