@@ -70,5 +70,30 @@ class Node {
     this.next = null;
   }
 }
+// linkedlist class
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
+  }
+
+  add(element, id) {
+    var node = new Node(element, id);
+    var current;
+
+    if (this.head == null) this.head = node;
+    else {
+      current = this.head;
+
+      while (current.next) {
+        current = current.next;
+      }
+      current.next = node;
+    }
+  }
+
+  
+}
+
 
 export default App;
